@@ -1,0 +1,80 @@
+@use '../../utils/variables' as v;
+
+.sliderWindow {
+    background-color: #00000095;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    left: 0;
+    z-index: 100;
+}
+
+.slider {
+    position: absolute;
+    right: 0;
+    width: 50vw;
+    height: 100vh;
+    background-color: white;
+    border: 1px solid black;
+    z-index: 101;
+    padding: 2rem;
+    animation: sliderAnimation 1s ease-in forwards;
+}
+
+@keyframes sliderAnimation {
+    from {
+        translate: 100%;
+    }
+
+    to {
+        translate: 0;
+    }
+}
+
+.close {
+    display: flex;
+    justify-content: end;
+}
+
+.heading {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.gridContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.otpInput {
+    margin-top: 2rem;
+
+    input {
+        width: 40px;
+        height: 40px;
+        margin-right: 20px;
+    }
+}
+
+.otpExpire {
+    margin-top: 0.5rem;
+    color: #3F494880;
+}
+
+.otpError {
+    color: v.$error-color
+}
+
+.otpTimer {
+    color: v.$primary-color;
+}
+
+.successfullLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}

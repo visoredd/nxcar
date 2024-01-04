@@ -1,0 +1,156 @@
+@use '../../utils/variables' as v;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    flex-direction: column;
+    position: relative;
+
+    //height: calc(100vh - 6rem);
+    button {
+        font-size: 1rem;
+    }
+
+    div:not(:first-child) {
+        z-index: 10;
+    }
+}
+
+.frames {
+    overflow: hidden;
+
+    img {
+        position: absolute;
+        translate: -50% -20%;
+    }
+
+    .frame6 {
+        animation: frame6anime 2s linear forwards;
+    }
+
+    .frame5 {
+        animation: frame5anime 2s linear forwards;
+    }
+
+    .frame4 {
+        animation: frame4anime 2s linear forwards;
+    }
+
+    .frame3 {
+        animation: frame3anime 2s linear forwards;
+    }
+
+    .frame2 {
+        animation: frame2anime 2s linear forwards;
+    }
+
+    .frame1 {
+        animation: frame1anime 2s linear forwards;
+    }
+
+    .frame0 {
+        animation: frame0anime 2s linear forwards;
+    }
+
+    @keyframes frame6anime {
+        from {
+            translate: -400% 0%;
+            rotate: (180deg)
+        }
+
+        to {
+            translate: -50% -20%;
+            rotate: (0deg)
+        }
+    }
+
+    @keyframes frame5anime {
+        from {
+            translate: -400% -100%;
+            rotate: (180deg)
+        }
+
+        to {
+            translate: -50% -20%;
+            rotate: (0deg)
+        }
+    }
+
+    @keyframes frame4anime {
+        from {
+            translate: 0% -100%;
+            rotate: (180deg)
+        }
+
+        to {
+            translate: -50% -20%;
+            rotate: (0deg)
+        }
+    }
+
+    @keyframes frame3anime {
+        from {
+            translate: 200% -200%;
+            rotate: (270deg)
+        }
+
+        to {
+            translate: -50% -20%;
+            rotate: (0deg)
+        }
+    }
+
+    @keyframes frame2anime {
+        from {
+            translate: 400% 0%;
+            rotate: (270deg)
+        }
+
+        to {
+            translate: -50% -20%;
+            rotate: (0deg)
+        }
+    }
+
+    @keyframes frame1anime {
+        from {
+            translate: 200% -110%;
+            rotate: (90deg)
+        }
+
+        to {
+            translate: -50% -20%;
+            rotate: (0deg)
+        }
+    }
+
+    @keyframes frame0anime {
+        from {
+            translate: -400% 0%;
+            rotate: (90deg)
+        }
+
+        to {
+            translate: -50% -20%;
+            rotate: (0deg);
+        }
+    }
+}
+
+.spin {
+    color: v.$primary-color;
+    font-size: 15vw;
+    font-weight: 800;
+}
+
+.getStarted {
+    margin-top: 4rem;
+}

@@ -1,0 +1,22 @@
+@use '../../utils/variables' as v;
+
+header {
+    display: flex;
+    justify-content: space-around;
+    height: 6rem;
+    border: 0.1rem solid lightgray;
+    align-items: center;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 5rem;
+
+    div {
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+    }
+
+}
